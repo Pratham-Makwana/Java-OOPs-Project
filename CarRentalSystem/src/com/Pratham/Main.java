@@ -1,4 +1,5 @@
-package CarRentalSystem;
+package com.Pratham;
+
 
 import java.util.ArrayList;
 import java.util.List;

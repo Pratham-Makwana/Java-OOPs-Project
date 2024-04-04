@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankingSystem/BankingSystem.iml" filepath="$PROJECT_DIR$/BankingSystem/BankingSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" filepath="$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EmployeePayRollSystem/EmployeePayRollSystem.iml" filepath="$PROJECT_DIR$/EmployeePayRollSystem/EmployeePayRollSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HotelReservation-System/HotelReservation-System.iml" filepath="$PROJECT_DIR$/HotelReservation-System/HotelReservation-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC-Operation/JDBC-Operation.iml" filepath="$PROJECT_DIR$/JDBC-Operation/JDBC-Operation.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-OOPs-Project.iml" filepath="$PROJECT_DIR$/Java-OOPs-Project.iml" />
     </modules>
   </component>

@@ -1,35 +1,39 @@
-package JDBC_Test;
+package com.Pratham;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
-public class DeleteOprationJDBC {
+public class InsertOperationJDBC {
     public static void main(String[] args) {
+
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
         String password = "Pratham@2911";
-        String query = "DELETE FROM employees where id = 3";
+        String query = "INSERT INTO employees(id,name,job_title,salary) VALUES (3,'Harshite','FullStack Developer',85000.0)";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver loaded Successfully");
-        }catch (ClassNotFoundException e){
+            System.out.println("Driver Loaded Successfully");
+        } catch (ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
 
         try {
+
             Connection con = DriverManager.getConnection(url,username,password);
+            System.out.println("Connection Successfully");
             Statement stm = con.createStatement();
             int rowsAffected = stm.executeUpdate(query);
 
             if (rowsAffected > 0){
-                System.out.println("Delete Successfully " + rowsAffected + "row(s) affected");
+                System.out.println("Inset Successfully " + rowsAffected + " row(s) affected");
             }else {
-                System.out.println("Deletion Failed!! ");
+                System.out.println("Insertion Failed!!");
             }
+            stm.close();
+            con.close();
+
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
+
     }
 }

@@ -1,4 +1,4 @@
-package JDBC_Test;
+package com.Pratham;
 
 import java.sql.*;
 

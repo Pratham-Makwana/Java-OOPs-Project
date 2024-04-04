@@ -1,39 +1,35 @@
-package JDBC_Test;
+package com.Pratham;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-public class InsertOperationJDBC {
+public class UpadateOperationJDBC {
     public static void main(String[] args) {
-
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
         String password = "Pratham@2911";
-        String query = "INSERT INTO employees(id,name,job_title,salary) VALUES (3,'Harshite','FullStack Developer',85000.0)";
+        String query = "UPDATE employees SET job_title = 'Full-Stack Developer', salary = 70000 where id = 2";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver Loaded Successfully");
-        } catch (ClassNotFoundException e){
+            System.out.println("Driver loaded Successfully");
+        }catch (ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
 
         try {
-
             Connection con = DriverManager.getConnection(url,username,password);
-            System.out.println("Connection Successfully");
             Statement stm = con.createStatement();
             int rowsAffected = stm.executeUpdate(query);
 
             if (rowsAffected > 0){
-                System.out.println("Inset Successfully " + rowsAffected + " row(s) affected");
+                System.out.println("Update Successfully " + rowsAffected + "row(s) affected");
             }else {
-                System.out.println("Insertion Failed!!");
+                System.out.println("update Failed!! ");
             }
-            stm.close();
-            con.close();
-
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-
     }
 }

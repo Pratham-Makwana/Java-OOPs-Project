@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class PrepareStatement_Insertion {
     public static void main(String[] args) {
@@ -22,10 +23,20 @@ public class PrepareStatement_Insertion {
         try {
             Connection connection = DriverManager.getConnection(url,username,password);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1,3);
-            preparedStatement.setString(2,"Prabhat");
-            preparedStatement.setString(3,"DevOps Engineer");
-            preparedStatement.setDouble(4,80000.00);
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter ID: ");
+            int id = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Enter name: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter job title: ");
+            String job_title = scanner.nextLine();
+            System.out.print("Enter Salary: ");
+            double salary = scanner.nextDouble();
+            preparedStatement.setInt(1,id);
+            preparedStatement.setString(2,name);
+            preparedStatement.setString(3,job_title);
+            preparedStatement.setDouble(4,salary);
 
             int rowsAffected = preparedStatement.executeUpdate();
 

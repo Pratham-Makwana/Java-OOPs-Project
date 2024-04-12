@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Banking Management System/Banking Management System.iml" filepath="$PROJECT_DIR$/Banking Management System/Banking Management System.iml" />
       <module fileurl="file://$PROJECT_DIR$/BankingSystem/BankingSystem.iml" filepath="$PROJECT_DIR$/BankingSystem/BankingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" filepath="$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/EmployeePayRollSystem/EmployeePayRollSystem.iml" filepath="$PROJECT_DIR$/EmployeePayRollSystem/EmployeePayRollSystem.iml" />

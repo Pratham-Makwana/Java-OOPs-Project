@@ -30,9 +30,12 @@ public class ImageRetrieverDatabase {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()){
+
+                // Store the binary data from the database to byte array
                 byte[] image_Data = resultSet.getBytes("image_data");
                 String image_path = folder_path + "antiRagging.png";
                 OutputStream outputStream = new FileOutputStream(image_path);
+                // OutputStream converting Binary ImageData to Image Form
                 outputStream.write(image_Data);
                 System.out.println("Image Founded!!!");
             }else {
